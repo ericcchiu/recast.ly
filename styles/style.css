@@ -1,17 +1,36 @@
 @import url("http://netdna.bootstrapcdn.com/bootstrap/3.0.0-rc2/css/bootstrap-glyphicons.css");
 
 body {
-  background: #f1f1f1;
+  background: white;
 }
 
 .navbar {
-  background: #fff;
+  background: white;
   margin-bottom: 20px;
 }
 
 .navbar img {
   height: 40px;
   width: 50px;
+}
+
+.title {
+  background-color: white;
+  text-align: center;
+  font-family: 'Trebuchet MS';
+}
+
+#x {
+  color: coral;
+  font-size: 69px;
+}
+#dash {
+  color: black;
+  font-size: 50px;
+}
+#stream {
+  color: mediumpurple;
+  font-size: 50px;
 }
 
 .search-bar {
