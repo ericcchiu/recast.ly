@@ -9,18 +9,21 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      videoList: [],
-      curVideo: null
+      videoList: exampleVideoData,
+      curVideo: null,
     }
     this.selectHandler = this.selectHandler.bind(this);
   }
 
+  // select video method
   selectHandler(video) {
-    // console.log("CLICK!");
     this.setState({
       curVideo: video
     });
-    // console.log(this.state.curVideo)
+  }
+
+  searchHandler(searchText) {
+    console.log("%cSEARCH HANDLER !!", "color:plum")
   }
 
   render() {
@@ -35,12 +38,12 @@ class App extends React.Component {
           <div className="col-md-7">
             <div><VideoPlayer
               curVideo={this.state.curVideo}
-              videoList={exampleVideoData} />
+              videoList={this.state.videoList} />
             </div>
           </div>
           <div className="col-md-5">
             <div><VideoList
-              videos={exampleVideoData}
+              videos={this.state.videoList}
               clicked={this.selectHandler} />
             </div>
           </div>
