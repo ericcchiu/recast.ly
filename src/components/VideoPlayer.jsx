@@ -1,7 +1,7 @@
 var VideoPlayer = (props) => {
   let selectedVideo = {};
   props.curVideo ? selectedVideo = props.curVideo : selectedVideo = props.videoList[0];
-  console.log('This is our video ID:', selectedVideo.id.videoId);
+  // console.log('This is our video ID:', selectedVideo.id.videoId); 
   return (
 
     < div className="video-player" >

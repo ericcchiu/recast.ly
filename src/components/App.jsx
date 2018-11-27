@@ -2,6 +2,7 @@ import VideoList from "./VideoList.js";
 import Search from "./Search.js";
 import videoPlayer from "./VideoPlayer.js";
 import VideoPlayer from "./VideoPlayer.js";
+// import searchYouTube from "../lib/searchYouTube.js"
 import exampleVideoData from "../data/exampleVideoData.js";
 
 
@@ -13,6 +14,7 @@ class App extends React.Component {
       curVideo: null,
     }
     this.selectHandler = this.selectHandler.bind(this);
+    this.search = this.search.bind(this);
   }
 
   // select video method
@@ -22,16 +24,21 @@ class App extends React.Component {
     });
   }
 
-  searchHandler(searchText) {
-    console.log("%cSEARCH HANDLER !!", "color:plum")
+  search(videos) {
+    this.setState({
+      videoList: videos
+    })
   }
+
+
+
 
   render() {
     return (
       <div>
         <nav className="navbar">
           <div className="col-md-6 offset-md-3">
-            <div><Search /></div>
+            <div><Search search={this.search} /></div>
           </div>
         </nav>
         <div className="row">
