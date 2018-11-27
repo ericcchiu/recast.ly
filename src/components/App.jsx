@@ -8,10 +8,19 @@ import exampleVideoData from "../data/exampleVideoData.js";
 class App extends React.Component {
   constructor(props) {
     super(props);
+    this.state = {
+      videoList: [],
+      curVideo: null
+    }
+    this.selectHandler = this.selectHandler.bind(this);
   }
 
-  onSelectHandler = (event) => {
+  selectHandler(video) {
     console.log("CLICK!");
+    this.setState({
+      curVideo: video
+    });
+    console.log(this.state.curVideo)
   }
 
   render() {
@@ -27,7 +36,7 @@ class App extends React.Component {
             <div><VideoPlayer /></div>
           </div>
           <div className="col-md-5">
-            <div><VideoList videos={exampleVideoData} click={this.onSelectHandler.bind(this)} /></div>
+            <div><VideoList videos={exampleVideoData} clicked={this.selectHandler} /></div>
           </div>
         </div>
       </div>

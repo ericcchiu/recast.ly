@@ -19,7 +19,10 @@ body {
   text-align: center;
   font-family: 'Trebuchet MS';
 }
-
+#egg{
+  color: thistle;
+  font-size: 69px;
+}
 #x {
   color: coral;
   font-size: 69px;
@@ -30,7 +33,11 @@ body {
 }
 #stream {
   color: mediumpurple;
-  font-size: 50px;
+  font-size: 60px;
+}
+#tube {
+  color: violet;
+  font-size:60px;
 }
 
 .search-bar {
