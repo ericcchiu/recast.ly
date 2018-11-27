@@ -16,11 +16,11 @@ class App extends React.Component {
   }
 
   selectHandler(video) {
-    console.log("CLICK!");
+    // console.log("CLICK!");
     this.setState({
       curVideo: video
     });
-    console.log(this.state.curVideo)
+    // console.log(this.state.curVideo)
   }
 
   render() {
@@ -33,10 +33,16 @@ class App extends React.Component {
         </nav>
         <div className="row">
           <div className="col-md-7">
-            <div><VideoPlayer /></div>
+            <div><VideoPlayer
+              curVideo={this.state.curVideo}
+              videoList={exampleVideoData} />
+            </div>
           </div>
           <div className="col-md-5">
-            <div><VideoList videos={exampleVideoData} clicked={this.selectHandler} /></div>
+            <div><VideoList
+              videos={exampleVideoData}
+              clicked={this.selectHandler} />
+            </div>
           </div>
         </div>
       </div>
